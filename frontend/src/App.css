@@ -1,0 +1,33 @@
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 0.1px solid;
+}
+
+input:focus {
+  outline: none;
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: translateY(-20px); /* Mulai dari posisi lebih tinggi */
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateY(0); /* Bergerak ke posisi semula */
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.slide-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: translateY(
+    -20px
+  ); /* Kembali ke posisi lebih tinggi saat menghilang */
+  transition: opacity 0.3s, transform 0.3s;
+}
