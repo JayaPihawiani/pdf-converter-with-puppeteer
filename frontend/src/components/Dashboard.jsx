@@ -74,9 +74,7 @@ const Dashboard = () => {
 
   const deleteItem = async (id) => {
     try {
-      const response = await axios.delete(
-        `http://localhost:5000/api/product/${id}`
-      );
+      await axios.delete(`http://localhost:5000/api/product/${id}`);
       getDataProduct();
     } catch (error) {
       console.log(error.response);
